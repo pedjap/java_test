@@ -13,6 +13,9 @@ public class test {
 		}
 		pedja();
 
+		pedja();
+		pedja();
+
 		int a = 10;
 		int b = 20;
 		double aSq = Math.pow(a, 2);
