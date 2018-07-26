@@ -9,7 +9,9 @@ import javax.lang.model.util.ElementScanner6;
 
 public class test {
     public static void main(String[] args) {
-		print(2);
+	//	System.out.println(makeFancy("JAVA"));
+	//	System.out.println(mystery5(1));
+		System.out.println(puzzle(22, 11));
 	}
 
 
@@ -17,7 +19,7 @@ public class test {
 	private static void pedja(){
 		for(int i = 0; i < 10; i++){
 			System.out.println("Ја могу све!!!");
-		}
+		}	
 	}
 
 	private static void sentance(String she,String who,String whom){
@@ -127,6 +129,14 @@ public class test {
 		}
 	}
 
+	private static int mystery5(int x){
+		if(x == 5){
+			return x;
+		}else{
+			return mystery5(x--) * 5;
+		}
+	}
+
 	public static void print(int n) {
 		if (n == 1) {
 			System.out.print("< bc >");
@@ -135,6 +145,34 @@ public class test {
 			print(n-1);
 		}
 	}
+
+	public static void mystery(String foo, String bar, String zazz) {
+        System.out.println(zazz + " and " + foo + " like " + bar);
+	}
+	
+	private static int smallest(int a, int b, int c){
+		return Math.min(Math.min(a,b),c);
+	}
+
+	private static int lastDigit(int num){
+		return (int)Math.abs(num % 10);
+	}
+
+	public static String makeFancy(String s) {
+		if (s.length() == 0) {
+			return "*";
+		}
+		return "*" + s.substring(0,1) + makeFancy(s.substring(0, s.length()-1));
+	}
+
+	public static int puzzle(int i, int j) {
+		if (i == j) {
+			return 0;
+		} else {
+			return 1 + puzzle(i - 2, j - 1);
+		}
+	}
+
 }
 /* Predrag Petkovic je genije za programiranje */
 /* Предраг Петковић је геније за програмирање */

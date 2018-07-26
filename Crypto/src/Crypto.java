@@ -1,14 +1,13 @@
 import java.util.*;
 import java.lang.*;
 
+
+// Predrag Petkovic
+
+
 public class Crypto{
 	public static void main(String[] args){
-		System.out.println();
-		String pedja = "(Pedja je kralj. Jeste!!!??;;!!,,...;;\")";
-		String newPedja = new String();
-		newPedja = encrypString(pedja, 5, 4);
-		pedja  = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse magna leo, ullamcorper quis pharetra laoreet, aliquet at leo. Fusce dictum velit ac blandit fringilla. Quisque volutpat libero eget eros lacinia varius. Cras nec tincidunt odio. Quisque viverra aliquam nunc at egestas. Duis ultrices augue eget quam luctus, sit amet molestie orci fermentum. Aliquam bibendum tempor libero, non posuere ante finibus id. Nulla facilisi. Vivamus a purus dolor.Nam vulputate tristique velit vel ullamcorper. Ut mi neque, ornare ac euismod vitae, iaculis sollicitudin felis. Vestibulum laoreet tortor eu lacus elementum cursus. Sed tempor congue lectus non auctor. In hac habitasse platea. ";
-		newPedja = encrypString(pedja, 5, 4);
+		
 	}
 
 
@@ -16,7 +15,6 @@ public class Crypto{
 		String newText = new String();		
 		int length = text.length();
 		int ch;
-
 
 		for(int i = 0; i < length; i++){
 			ch = text.charAt(i);
@@ -72,18 +70,12 @@ public class Crypto{
 		return newText;
 	}
 
-	private static String encrypString(String text, int key, int group){
+	private static String encryptString(String text, int key, int group){
 		String newText = new String();
 
 		newText = normalizeText(text);
-		System.out.println("After Normalizing...");
-		System.out.println(newText);
-		text = caesarify(newText, key);
-		System.out.println("After caeserfy...");
-		System.out.println(text);
-		newText = groupify(text, group);
-		System.out.println("After groupify...");
-		System.out.println(newText);
+		newText = caesarify(newText, key);
+		newText = groupify(newText, group);
 
 		return newText;
 	}
