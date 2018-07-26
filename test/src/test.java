@@ -9,17 +9,7 @@ import javax.lang.model.util.ElementScanner6;
 
 public class test {
     public static void main(String[] args) {
-
-		mystery3(13);
-		System.out.println();
-		mystery3(25);
-		System.out.println();
-		mystery3(50);
-		System.out.println();
-		mystery3(75);
-		System.out.println();
-		mystery3(100);
-		System.out.println();
+		print(2);
 	}
 
 
@@ -134,6 +124,15 @@ public class test {
 			System.out.print("[");
 			mystery3(n - 1);
 			System.out.print("]");
+		}
+	}
+
+	public static void print(int n) {
+		if (n == 1) {
+			System.out.print("< bc >");
+		} else {
+			System.out.print("p(" + n + ") -> ");
+			print(n-1);
 		}
 	}
 }
